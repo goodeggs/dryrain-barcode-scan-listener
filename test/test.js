@@ -62,6 +62,17 @@ describe('onScan()', function () {
     expect(scanHandler).to.have.been.calledWith('123abc');
   });
 
+  it('supports empty barcode value', function () {
+    const scanHandler = sinon.stub();
+    barcodeScanListener.onScan({
+      barcodePrefix: 'L%',
+      barcodeValueTest: /^$/,
+    }, scanHandler);
+    window.DT_DecoderDataResponse('L%');
+    expect(scanHandler).to.have.been.calledOnce();
+    expect(scanHandler).to.have.been.calledWith('');
+  });
+
   it('works with multiple listeners', function () {
     const lotScanHandler = sinon.stub();
     barcodeScanListener.onScan({
