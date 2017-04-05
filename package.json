@@ -19,10 +19,6 @@
     "listener",
     "dryrain"
   ],
-  "engines": {
-    "node": "4.2.6",
-    "npm": "^3.7"
-  },
   "dependencies": {
     "lodash": "^4.15.0"
   },
