@@ -1,6 +1,6 @@
 {
   "name": "dryrain-barcode-scan-listener",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Listen for scan events inside Dryrain Technologies' Enterprise Browser app.",
   "main": "index.js",
   "author": "Good Eggs Inc.",
